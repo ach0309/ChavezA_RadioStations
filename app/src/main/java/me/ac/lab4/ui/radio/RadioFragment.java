@@ -29,44 +29,6 @@ import me.ac.lab4.R;
 import me.ac.lab4.controller.MediaPlayerHandler;
 import me.ac.lab4.model.RadioStation;
 
-//public class RadioFragment extends Fragment {
-//
-//    private String TAG = "FRAG_RADIO";
-//    private RadioViewModel radioViewModel;
-//    private ArrayList<RadioStation> stationList;
-//    private RecyclerView recyclerView;
-//
-//
-//
-//    @Override
-//    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-//                             @Nullable Bundle savedInstanceState) {
-//        radioViewModel = new ViewModelProvider(this).get(RadioViewModel.class);
-//        View root = inflater.inflate(R.layout.radio_fragment, container, false);
-//        recyclerView = root.findViewById(R.id.recyclerView);
-//
-//        final TextView txt_name = root.findViewById(R.id.textView_RSName);
-//        final TextView txt_genre = root.findViewById(R.id.textView_RSGenre);
-//        final TextView txt_location = root.findViewById(R.id.textView_RSLocation);
-//        final TextView txt_link = root.findViewById(R.id.textView_RSlink);
-//
-//        Bundle bundle = this.getArguments();
-//
-//        String nameBundle = bundle.getString("name");
-//        String genreBundle = bundle.getString("genre");
-//        String locationBundle = bundle.getString("location");
-//        String linkBundle = bundle.getString("link");
-//
-//        txt_name.setText(nameBundle);
-//        txt_genre.setText(genreBundle);
-//        txt_location.setText(locationBundle);
-//        txt_link.setText(linkBundle);
-//
-//        return root;
-//
-//    }
-//
-//}
 
 public class RadioFragment extends Fragment {
 
@@ -122,7 +84,7 @@ public class RadioFragment extends Fragment {
             public void onClick(View v) {
                 if (radioOn) {
                     radioOn = false;
-                    button.setText("Radio is ON");
+                    button.setText("Radio ON");
                     if (mediaPlayerHandler.isPlaying()) {
                         Log.i("HERE", " playing " + txt_link.getText().toString());
                         radioWasOnBefore = true;
@@ -132,7 +94,7 @@ public class RadioFragment extends Fragment {
                     }
                 } else {
                     radioOn = true;
-                    button.setText("Radio is OFF");
+                    button.setText("Radio OFF");
                     if (!mediaPlayerHandler.isPlaying()) {
                         mediaPlayerHandler.pauseMediaPlayer();
                         mediaPlayerHandler.shutdownMediaPlayer();

@@ -77,7 +77,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="208dp"
         android:backgroundTint="#2196F3"
-        android:text="PLAY"
+        android:text="Click to Start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
